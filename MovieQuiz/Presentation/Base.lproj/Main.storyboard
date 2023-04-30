@@ -17,10 +17,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BfG-ZN-OBe" userLabel="No button">
-                                <rect key="frame" x="43" y="723" width="156" height="57"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BfG-ZN-OBe" userLabel="No button">
+                                <rect key="frame" x="20" y="802" width="177" height="60"/>
                                 <color key="backgroundColor" name="YP White"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="SJL-3D-hel"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="YSDisplay-Medium" family="YS Display" pointSize="20"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" title="Нет">
@@ -32,9 +34,8 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BfJ-VR-xrg" userLabel="Yes button">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BfJ-VR-xrg" userLabel="Yes button">
                                 <rect key="frame" x="218" y="723" width="157" height="57"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" name="YP White"/>
                                 <fontDescription key="fontDescription" name="YSDisplay-Medium" family="YS Display" pointSize="20"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
@@ -50,6 +51,15 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" name="YP Black"/>
+                        <constraints>
+                            <constraint firstItem="BfJ-VR-xrg" firstAttribute="height" secondItem="BfG-ZN-OBe" secondAttribute="height" id="6Zz-Sq-1KR"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="BfJ-VR-xrg" secondAttribute="bottom" id="RMo-3u-PdN"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="BfG-ZN-OBe" secondAttribute="bottom" id="U29-ey-sdE"/>
+                            <constraint firstItem="BfJ-VR-xrg" firstAttribute="leading" secondItem="BfG-ZN-OBe" secondAttribute="trailing" constant="20" id="Zmv-tg-DcY"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="BfJ-VR-xrg" secondAttribute="trailing" constant="20" id="aRU-WO-f7b"/>
+                            <constraint firstItem="BfG-ZN-OBe" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="h5q-BD-9Ju"/>
+                            <constraint firstItem="BfJ-VR-xrg" firstAttribute="width" secondItem="BfG-ZN-OBe" secondAttribute="width" id="loh-yy-PMO"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
