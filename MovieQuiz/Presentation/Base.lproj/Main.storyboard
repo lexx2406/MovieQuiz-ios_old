@@ -35,7 +35,7 @@
                                 </userDefinedRuntimeAttributes>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BfJ-VR-xrg" userLabel="Yes button">
-                                <rect key="frame" x="218" y="723" width="157" height="57"/>
+                                <rect key="frame" x="225" y="805" width="157" height="57"/>
                                 <color key="backgroundColor" name="YP White"/>
                                 <fontDescription key="fontDescription" name="YSDisplay-Medium" family="YS Display" pointSize="20"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
