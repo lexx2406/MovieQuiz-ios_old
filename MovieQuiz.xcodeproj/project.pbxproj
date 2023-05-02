@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A86C206D2A00B07800819EDE /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AD1ABABF2831907F00B3E448 /* Info.plist */; };
 		A8C0A7402A007A2B003F163D /* YS Display-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A8C0A73E2A007A2B003F163D /* YS Display-Bold.ttf */; };
 		A8C0A7412A007A2B003F163D /* YS Display-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A8C0A73F2A007A2B003F163D /* YS Display-Medium.ttf */; };
 		AD1ABAB22831907B00B3E448 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD1ABAB12831907B00B3E448 /* AppDelegate.swift */; };
@@ -183,6 +184,7 @@
 			files = (
 				AD1ABABE2831907F00B3E448 /* LaunchScreen.storyboard in Resources */,
 				AD1ABABB2831907F00B3E448 /* Assets.xcassets in Resources */,
+				A86C206D2A00B07800819EDE /* Info.plist in Resources */,
 				AD1ABAB92831907B00B3E448 /* Main.storyboard in Resources */,
 				A8C0A7402A007A2B003F163D /* YS Display-Bold.ttf in Resources */,
 				A8C0A7412A007A2B003F163D /* YS Display-Medium.ttf in Resources */,
