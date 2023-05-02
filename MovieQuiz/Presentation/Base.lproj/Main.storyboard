@@ -67,9 +67,7 @@
                                                     <color key="titleColor" name="YS Black"/>
                                                 </state>
                                                 <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="number">
-                                                        <string key="keyPath">layer.cornerRadius
-layer.cornerRadius</string>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                                         <integer key="value" value="15"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
@@ -83,9 +81,7 @@ layer.cornerRadius</string>
                                                     <color key="titleColor" name="YS Black"/>
                                                 </state>
                                                 <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="number">
-                                                        <string key="keyPath">layer.cornerRadius
-layer.cornerRadius</string>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                                         <integer key="value" value="15"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
