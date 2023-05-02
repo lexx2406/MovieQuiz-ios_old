@@ -10,16 +10,16 @@ final class MovieQuizViewController: UIViewController {
         counterLabel.font = UIFont(name: "YS Display-Medium", size: 20)
         labelQuestion.font = UIFont(name: "YS Display-Medium", size: 20)
     }
-    @IBOutlet weak var noButton: UIButton!
-    @IBOutlet weak var yesButton: UIButton!
-    @IBOutlet weak var imageView: UIImageView!
-    @IBOutlet weak var textLabel: UILabel!
-    @IBOutlet weak var counterLabel: UILabel!
-    @IBAction func noButtonClicked(_ sender: Any) {
+    @IBOutlet weak private var noButton: UIButton!
+    @IBOutlet weak private var yesButton: UIButton!
+    @IBOutlet weak private var imageView: UIImageView!
+    @IBOutlet weak private var textLabel: UILabel!
+    @IBOutlet weak private var counterLabel: UILabel!
+    @IBAction private func noButtonClicked(_ sender: Any) {
     }
-    @IBAction func yesButtonClicked(_ sender: Any) {
+    @IBAction private func yesButtonClicked(_ sender: Any) {
     }
-    @IBOutlet weak var labelQuestion: UILabel!
+    @IBOutlet weak private var labelQuestion: UILabel!
 }
 
 /*
