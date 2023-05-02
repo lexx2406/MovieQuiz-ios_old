@@ -4,7 +4,22 @@ final class MovieQuizViewController: UIViewController {
     // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        noButton.titleLabel?.font = UIFont(name: "YS Display-Medium", size: 20)
+        yesButton.titleLabel?.font = UIFont(name: "YS Display-Medium", size: 20)
+        textLabel.font = UIFont(name: "YS Display-Bold", size: 26)
+        counterLabel.font = UIFont(name: "YS Display-Medium", size: 20)
+        labelQuestion.font = UIFont(name: "YS Display-Medium", size: 20)
     }
+    @IBOutlet weak var noButton: UIButton!
+    @IBOutlet weak var yesButton: UIButton!
+    @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var textLabel: UILabel!
+    @IBOutlet weak var counterLabel: UILabel!
+    @IBAction func noButtonClicked(_ sender: Any) {
+    }
+    @IBAction func yesButtonClicked(_ sender: Any) {
+    }
+    @IBOutlet weak var labelQuestion: UILabel!
 }
 
 /*
@@ -70,3 +85,49 @@ final class MovieQuizViewController: UIViewController {
  Вопрос: Рейтинг этого фильма больше чем 6?
  Ответ: НЕТ
  */
+struct QuizQuestion {
+    let image:String
+    let question:String
+    let correctAnswer:Bool
+}
+
+private let question: [QuizQuestion] = [
+    QuizQuestion (image: "The Godfather",
+                  question: "Рейтинг этого фильма больше чем 6?",
+                  correctAnswer: true),
+    QuizQuestion (image: "The Dark Knight",
+                  question: "Рейтинг этого фильма больше чем 6?",
+                  correctAnswer: true),
+    
+    QuizQuestion (image: "Kill Bill",
+                  question: "Рейтинг этого фильма больше чем 6?",
+                  correctAnswer: true),
+    QuizQuestion (image: "The Avengers",
+                  question: "Рейтинг этого фильма больше чем 6?",
+                  correctAnswer: true),
+    QuizQuestion (image: "Deadpool",
+                  question: "Рейтинг этого фильма больше чем 6?",
+                  correctAnswer: true),
+    QuizQuestion (image: "The Green Knight",
+                  question: "Рейтинг этого фильма больше чем 6?",
+                  correctAnswer: true),
+    
+    QuizQuestion (image: "Old",
+                  question: "Рейтинг этого фильма больше чем 6?",
+                  correctAnswer: false),
+    QuizQuestion (image: "The Ice Age Adventures of Buck Wild",
+                  question: "Рейтинг этого фильма больше чем 6?",
+                  correctAnswer: false),
+    QuizQuestion (image: "Tesla",
+                  question: "Рейтинг этого фильма больше чем 6?",
+                  correctAnswer: false),
+    
+    QuizQuestion (image: "Vivarium",
+                  question: "Рейтинг этого фильма больше чем 6?",
+                  correctAnswer: false),
+]
+
+
+
+
+
