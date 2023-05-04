@@ -20,6 +20,12 @@ final class MovieQuizViewController: UIViewController {
     @IBAction private func yesButtonClicked(_ sender: Any) {
     }
     @IBOutlet weak private var labelQuestion: UILabel!
+    
+    private func show(quiz step: QuizStepViewModel) {
+      imageView.image = step.image
+      textLabel.text = step.question
+      counterLabel.text = step.questionNumber
+    }
 }
 
 /*
@@ -91,7 +97,7 @@ struct QuizQuestion {
     let correctAnswer:Bool
 }
 
-private let question: [QuizQuestion] = [
+private let questions: [QuizQuestion] = [
     QuizQuestion (image: "The Godfather",
                   question: "Рейтинг этого фильма больше чем 6?",
                   correctAnswer: true),
@@ -127,7 +133,17 @@ private let question: [QuizQuestion] = [
                   correctAnswer: false),
 ]
 
-
-
-
-
+private var currentQuestionIndex = 0
+private var correctAnswer = 0
+struct QuizStepViewModel {
+  let image: UIImage
+  let question: String
+  let questionNumber: String
+}
+private func convert(model: QuizQuestion) -> QuizStepViewModel {
+    let questionStep = QuizStepViewModel(
+        image: UIImage(named: model.image) ?? UIImage(),
+        question: model.question,
+        questionNumber: "\(currentQuestionIndex + 1)/\(questions.count)")
+    return questionStep
+}
