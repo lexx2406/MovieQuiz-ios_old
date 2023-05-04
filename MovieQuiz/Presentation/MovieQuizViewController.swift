@@ -47,29 +47,22 @@ final class MovieQuizViewController: UIViewController {
             show(quiz: viewModel)
         }
     }
-        private func showAnswerResult(isCorrect: Bool) {
-                imageView.layer.masksToBounds = true
-                imageView.layer.borderWidth = 8
-                imageView.layer.borderColor = isCorrect ? UIColor.ysGreen.cgColor : UIColor.ysRed.cgColor
-                DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
-                    self.showNextQuestionOrResults()
-                }
-            }
-                
-    
-        let alert = UIAlertController(
-            title: "Этот раунд окончен!",
-            message: "Ваш результат ???",
-            preferredStyle: .alert)
-        let action = UIAlertAction(title: result.buttonText, style: .default) { _ in
-            self.currentQuestionIndex = 0
-            self.correctAnswers = 0
-            let firstQuestion = self.questions[self.currentQuestionIndex]
-            let viewModel = self.convert(model: firstQuestion)
-            self.show(quiz: viewModel)
-            alert.addAction(action)
-            self.present(alert, animated: true, completion: nil)
+    private func showAnswerResult(isCorrect: Bool) {
+        imageView.layer.masksToBounds = true
+        imageView.layer.borderWidth = 8
+        imageView.layer.borderColor = isCorrect ? UIColor.ysGreen.cgColor : UIColor.ysRed.cgColor
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
+            self.showNextQuestionOrResults()
         }
+    }
+    
+    
+    let alert = UIAlertController(
+        title: "Этот раунд окончен!",
+        message: "Ваш результат ???",
+        preferredStyle: .alert)
+    
+    
     private let questions: [QuizQuestion] = [
         QuizQuestion (image: "The Godfather",
                       question: "Рейтинг этого фильма больше чем 6?",
@@ -106,11 +99,11 @@ final class MovieQuizViewController: UIViewController {
                       correctAnswer: false),
     ]
     
-struct QuizQuestion {
-    let image:String
-    let question:String
-    let correctAnswer:Bool
-}
+    struct QuizQuestion {
+        let image:String
+        let question:String
+        let correctAnswer:Bool
+    }
     private var currentQuestionIndex = 0
     private var correctAnswer = 0
     struct QuizStepViewModel {
@@ -125,4 +118,18 @@ struct QuizQuestion {
             questionNumber: "\(currentQuestionIndex + 1)/\(questions.count)")
         return questionStep
     }
+    let alert = UIAlertController(
+        title: "Этот раунд окончен!",
+        message: "Ваш результат ???",
+        preferredStyle: .alert) {
+            let action = UIAlertAction(title: result.buttonText, style: .default) { _ in
+                self.currentQuestionIndex = 0
+                self.correctAnswers = 0
+                let firstQuestion = self.questions[self.currentQuestionIndex]
+                let viewModel = self.convert(model: firstQuestion)
+                self.show(quiz: viewModel)
+            }
+            alert.addAction(action)
+            self.present(alert, animated: true, completion: nil)
+        }
 }
