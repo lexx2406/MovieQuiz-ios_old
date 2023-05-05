@@ -27,13 +27,12 @@ final class MovieQuizViewController: UIViewController {
         let currentQuestion = questions[currentQuestionIndex]
         let givenAnswer = true
         showAnswerResult(isCorrect: givenAnswer == currentQuestion.correctAnswer)
-        
     }
     @IBOutlet weak private var labelQuestion: UILabel!
     struct ViewModel {
-      let image: UIImage
-      let question: String
-      let questionNumber: String
+        let image: UIImage
+        let question: String
+        let questionNumber: String
     }
     struct QuizQuestion {
         let image: String
@@ -46,9 +45,9 @@ final class MovieQuizViewController: UIViewController {
         let questionNumber: String
     }
     struct QuizResultsViewModel {
-      let title: String
-      let text: String
-      let buttonText: String
+        let title: String
+        let text: String
+        let buttonText: String
     }
     private let questions: [QuizQuestion] = [
         QuizQuestion(
@@ -118,28 +117,22 @@ final class MovieQuizViewController: UIViewController {
             currentQuestionIndex += 1
             let nextQuestion = questions[currentQuestionIndex]
             let viewModel = convert(model: nextQuestion)
-            
             show(quiz: viewModel)
         }
-   
     }
     private func show(quiz result: QuizResultsViewModel) {
         let alert = UIAlertController(
             title: result.title,
             message: result.text,
             preferredStyle: .alert)
-        
         let action = UIAlertAction(title: result.buttonText, style: .default) { _ in
             self.currentQuestionIndex = 0
             self.correctAnswers = 0
-            
             let firstQuestion = self.questions[self.currentQuestionIndex]
             let viewModel = self.convert(model: firstQuestion)
             self.show(quiz: viewModel)
         }
-        
         alert.addAction(action)
-        
         self.present(alert, animated: true, completion: nil)
     }
     private func showAnswerResult(isCorrect: Bool) {
@@ -154,10 +147,10 @@ final class MovieQuizViewController: UIViewController {
         }
     }
 }
-            
-        
-    
-    
-    
-    
-    
+
+
+
+
+
+
+
