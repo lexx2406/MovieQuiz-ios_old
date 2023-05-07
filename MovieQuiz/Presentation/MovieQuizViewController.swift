@@ -4,11 +4,11 @@ final class MovieQuizViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        noButton.titleLabel?.font = UIFont(name: "YS Display-Medium", size: 20)
-        yesButton.titleLabel?.font = UIFont(name: "YS Display-Medium", size: 20)
-        textLabel.font = UIFont(name: "YS Display-Bold", size: 26)
-        counterLabel.font = UIFont(name: "YS Display-Medium", size: 20)
-        labelQuestion.font = UIFont(name: "YS Display-Medium", size: 20)
+        noButton.titleLabel?.font = UIFont(name: "YSDisplay-Medium", size: 20)
+        yesButton.titleLabel?.font = UIFont(name: "YSDisplay-Medium", size: 20)
+        textLabel.font = UIFont(name: "YSDisplay-Bold", size: 23)
+        counterLabel.font = UIFont(name: "YSDisplay-Medium", size: 20)
+        labelQuestion.font = UIFont(name: "YSDisplay-Medium", size: 20)
         
         imageView.layer.masksToBounds = true
         imageView.layer.borderWidth = 1
