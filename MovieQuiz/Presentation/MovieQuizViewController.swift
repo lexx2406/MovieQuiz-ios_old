@@ -9,11 +9,6 @@ final class MovieQuizViewController: UIViewController {
         textLabel.font = UIFont(name: "YSDisplay-Bold", size: 23)
         counterLabel.font = UIFont(name: "YSDisplay-Medium", size: 20)
         labelQuestion.font = UIFont(name: "YSDisplay-Medium", size: 20)
-        
-        imageView.layer.masksToBounds = true
-        imageView.layer.borderWidth = 1
-        imageView.layer.borderColor = UIColor.white.cgColor
-        imageView.layer.cornerRadius = 6
     }
     @IBOutlet weak private var noButton: UIButton!
     @IBOutlet weak private var yesButton: UIButton!
@@ -110,7 +105,7 @@ final class MovieQuizViewController: UIViewController {
         return questionStep
     }
     
-    private func show(quiz step: QuizStepViewModel) {
+   private func show(quiz step: QuizStepViewModel) {
         imageView.image = step.image
         textLabel.text = step.question
         counterLabel.text = step.questionNumber
@@ -124,11 +119,13 @@ final class MovieQuizViewController: UIViewController {
                 text: text,
                 buttonText: "Сыграть ещё раз")
             show(quiz: viewModel)
+            imageView.layer.borderColor = nil
         } else {
             currentQuestionIndex += 1
             let nextQuestion = questions[currentQuestionIndex]
             let viewModel = convert(model: nextQuestion)
             show(quiz: viewModel)
+            imageView.layer.borderColor = nil
         }
     }
     
@@ -155,6 +152,7 @@ final class MovieQuizViewController: UIViewController {
         imageView.layer.masksToBounds = true
         imageView.layer.borderWidth = 8
         imageView.layer.borderColor = isCorrect ? UIColor.ysGreen.cgColor : UIColor.ysRed.cgColor
+        imageView.layer.cornerRadius = 20
         DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
             self.showNextQuestionOrResults()
         }
