@@ -19,12 +19,16 @@ final class MovieQuizViewController: UIViewController {
         let currentQuestion = questions[currentQuestionIndex]
         let givenAnswer = false
         showAnswerResult(isCorrect: givenAnswer == currentQuestion.correctAnswer)
+        noButton.isEnabled = false
     }
+    
     @IBAction private func yesButtonClicked(_ sender: Any) {
         let currentQuestion = questions[currentQuestionIndex]
         let givenAnswer = true
         showAnswerResult(isCorrect: givenAnswer == currentQuestion.correctAnswer)
+        yesButton.isEnabled = false
     }
+    
     @IBOutlet weak private var labelQuestion: UILabel!
     
     struct ViewModel {
@@ -105,7 +109,7 @@ final class MovieQuizViewController: UIViewController {
         return questionStep
     }
     
-   private func show(quiz step: QuizStepViewModel) {
+    private func show(quiz step: QuizStepViewModel) {
         imageView.image = step.image
         textLabel.text = step.question
         counterLabel.text = step.questionNumber
@@ -120,12 +124,16 @@ final class MovieQuizViewController: UIViewController {
                 buttonText: "Сыграть ещё раз")
             show(quiz: viewModel)
             imageView.layer.borderColor = nil
+            noButton.isEnabled = true
+            yesButton.isEnabled = true
         } else {
             currentQuestionIndex += 1
             let nextQuestion = questions[currentQuestionIndex]
             let viewModel = convert(model: nextQuestion)
             show(quiz: viewModel)
             imageView.layer.borderColor = nil
+            noButton.isEnabled = true
+            yesButton.isEnabled = true
         }
     }
     
