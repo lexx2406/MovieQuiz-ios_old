@@ -9,7 +9,6 @@ final class MovieQuizViewController: UIViewController {
         textLabel.font = UIFont(name: "YSDisplay-Bold", size: 23)
         counterLabel.font = UIFont(name: "YSDisplay-Medium", size: 20)
         labelQuestion.font = UIFont(name: "YSDisplay-Medium", size: 20)
-        currentQuestionIndex += 1
         let nextQuestion = questions[currentQuestionIndex]
         let viewModel = convert(model: nextQuestion)
         show(quiz: viewModel)
